@@ -48,7 +48,6 @@ background-color:silver;
 border:1px solid black;
 padding:5px 5px 5px 5px;
 margin:50px 50px 50px 50px;
-background-image:linear-gradient(red,yellow);
 
 
 }
@@ -60,7 +59,8 @@ border:2px solid red;
 padding:20px 20px 20px 20px;
 margin:25px 25px 25px 25px;
 background-color:silver;
-background-image:linear-gradient(-90deg,red,yellow);
+ border-radius: 25px;
+
 }
 
 
@@ -70,9 +70,95 @@ border:3px solid blue;
 
 padding:50px 50px 50px 50px;
 margin:25px 25px 25px 25px;
-background-color:silver;
+background-image:linear-gradient(to right,red,orange,yellow,green,blue);
+opacity:0.5;
 }
 
+
+
+
+div.trans{
+width:100px;
+height:100px;
+background:red;
+transition:width 2s,height 4s,transform 2s;
+}
+
+
+div.trans:hover{
+width:300px;
+height:300px;
+transform:rotate(180deg);
+}
+
+
+
+
+
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+
+
+div.anim {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 </style>
 </head>
@@ -88,9 +174,33 @@ background-color:silver;
 
 <div id="id1">
 <div id="id2" align="center">
-<div id="id3">
+<div class="trans" id="id3">
 </div>
 </div>
 </div>
+
+<br>
+<div class="anim">
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_5terre.jpg">
+      <img src="/home/6CSE1/Downloads/img.jpg" alt="Cinque Terre" width="600" height="400" >
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="/home/6CSE1/Downloads/img_forest.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
 </body>
 </html>

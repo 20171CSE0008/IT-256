@@ -104,6 +104,7 @@ margin-left:100px;
 
 
 
+
 a:visited {
   color: green;
 }
@@ -117,6 +118,25 @@ a:hover {
 a:active {
   color: blue;
 }
+
+
+a:link{
+color:red;
+}
+
+
+p::first-letter{
+color:#ff0000;
+font-size:xx-large;
+}
+
+
+h3::selection
+{
+color:red;
+background:yellow;
+}
+
 </style>
 
 </head>
@@ -135,13 +155,16 @@ a:active {
 <p id="id2">hello!and welcome</p>
 
 <h2>hello!!! </h2>
-<p><span class="a">my  name is abdul</span></p>
 
-<p><span class="b">id number is 20171cse0008</span></p>
-
-<p><span class="c">my email is 201710100182@</span></p><br>
+<p>my  name is abdul</p>
 
 <p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+<br>
+
+<h3>hello!!! welcome</h3>
+
+
+
 
 </body>
 </html>
